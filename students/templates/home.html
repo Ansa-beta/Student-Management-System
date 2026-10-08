@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<header class="header">
+    <h1>Student Management System</h1>
+    <p>Manage student records efficiently</p>
+</header>
+
+<div class="container">
+    <!-- Add Student Section -->
+    <section class="add-section">
+        <h2>Add Student</h2>
+        <form method="POST" class="add_form">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Student Name" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="text" name="course" placeholder="Course" required>
+            <button class="add_btn" type="submit" name="add_student">Add Student</button>
+        </form>
+    </section>
+
+    <!-- Students Section -->
+    <section class="student-section">
+        <h2>Students</h2>
+        {% for student in students %}
+        <div class="student-card">
+            <!-- Student Information -->
+            <div class="student-info">
+                <p><strong>Name:</strong>{{ student.name }}</p>
+                <p><strong>Age:</strong>{{ student.age }}</p>
+                <p><strong>Course:</strong>{{ student.course }}</p>
+            </div>
+
+            <!-- Delete Student -->
+            <form method="POST">
+                {% csrf_token %}
+                <button class="delete_btn" name="delete_id" value="{{ student.id }}">Delete</button>
+            </form>
+
+
+            <!-- Update Student -->
+            <div class="update-section">
+                <h3>Update Student</h3>
+                <form method="POST" class="update_form">
+                    {% csrf_token %}
+                    <input type="text" name="name" value="{{ student.name }}" required>
+                    <input type="number" name="age" value="{{ student.age }}" required>
+                    <input type="text" name="course" value="{{ student.course }}" required>
+                    <button class="update_btn" name="update_id" value="{{ student.id }}">Update</button>
+                </form>
+            </div>
+
+        </div>
+        {% empty %}
+
+        <p class="no-students">
+            No students found.
+        </p>
+
+        {% endfor %}
+
+
+    </section>
+
+
+</div>
+
+</body>
+</html>

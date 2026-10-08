@@ -1,0 +1,264 @@
+/* ------------------------------
+   General Page
+------------------------------ */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f1f5f9;
+    color: #334155;
+    line-height: 1.5;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.header {
+    text-align: center;
+    background-color: #0f2747;
+    color: white;
+    padding: 32px 20px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: white;
+}
+
+.header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    color: #cbd5e1;
+}
+
+
+/* ------------------------------
+   Main Container
+------------------------------ */
+
+.container {
+    max-width: 950px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 39, 71, 0.08);
+}
+
+
+/* ------------------------------
+   Section Headings
+------------------------------ */
+
+h2 {
+    color: #0f2747;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbe4ee;
+}
+
+h3 {
+    color: #334155;
+    margin-bottom: 12px;
+}
+
+
+/* ------------------------------
+   Add Student Section
+------------------------------ */
+
+.add-section {
+    margin-bottom: 35px;
+}
+
+.add_form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+}
+
+
+/* ------------------------------
+   Input Fields
+------------------------------ */
+
+input {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #ffffff;
+    color: #334155;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.add_form input {
+    flex: 1;
+    min-width: 180px;
+}
+
+
+/* ------------------------------
+   Student Section
+------------------------------ */
+
+.student-section {
+    margin-top: 30px;
+}
+
+.student-card {
+    padding: 22px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(15, 39, 71, 0.06);
+}
+
+.student-info p {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+.student-info strong {
+    color: #0f2747;
+}
+
+
+/* ------------------------------
+   Forms inside Student Card
+------------------------------ */
+
+.student-card form {
+    margin: 12px 0;
+}
+
+.student-card input {
+    width: 180px;
+}
+
+
+/* ------------------------------
+   Update Section
+------------------------------ */
+
+.update-section {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #dbe4ee;
+}
+
+.update-section h3 {
+    font-size: 17px;
+    color: #475569;
+}
+
+.update_form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* Add Button */
+
+.add_btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+/* Update Button */
+
+.update_btn {
+    background-color: #d97706;
+    color: white;
+}
+
+
+/* Delete Button */
+
+.delete_btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+
+/* ------------------------------
+   No Students
+------------------------------ */
+
+.no-students {
+    text-align: center;
+    color: #64748b;
+    padding: 20px;
+}
+
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+
+@media (max-width: 700px) {
+
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .add_form,
+    .update_form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add_form input,
+    .student-card input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
