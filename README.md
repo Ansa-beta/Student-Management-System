@@ -17,13 +17,29 @@ A web application developed using Python and Django to manage student records.
 - Delete student details
 
 ## Project Structure
+
 ```text
 Student-Management-System/
+│
 ├── config/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
 ├── students/
-├── db.sqlite3
-├── main.py
+│   ├── migrations/
+│   ├── templates/
+│   ├── static/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   └── urls.py
+│
 ├── manage.py
+├── main.py
 └── README.md
 ```
 
