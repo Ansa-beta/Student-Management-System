@@ -6,6 +6,7 @@ A web application developed using Python and Django to manage student records.
 ## Technologies Used
 - Python
 - Django
+- MYSQL
 - HTML
 - CSS
 
